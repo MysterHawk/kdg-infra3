@@ -60,3 +60,9 @@
 [06-Jun-2024 20:51:44] NOTICE: exiting, bye-bye!
 [06-Jun-2024 20:59:58] NOTICE: fpm is running, pid 279
 [06-Jun-2024 20:59:58] NOTICE: ready to handle connections
+[06-Jun-2024 22:26:22] NOTICE: Terminating ...
+[06-Jun-2024 22:26:22] NOTICE: exiting, bye-bye!
+[06-Jun-2024 22:26:42] NOTICE: fpm is running, pid 280
+[06-Jun-2024 22:26:42] NOTICE: ready to handle connections
+[06-Jun-2024 23:10:31] NOTICE: Terminating ...
+[06-Jun-2024 23:10:31] NOTICE: exiting, bye-bye!

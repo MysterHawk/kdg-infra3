@@ -23,3 +23,13 @@ Version: '10.11.8-MariaDB-log'  socket: '/var/run/mysqld/mysqld.sock'  port: 330
 2024-06-06 20:59:51 5 [Warning] Aborted connection 5 to db: 'unconnected' user: 'unauthenticated' host: 'localhost' (This connection closed normally without authentication)
 2024-06-06 20:59:52 4 [Warning] Aborted connection 4 to db: 'unconnected' user: 'unauthenticated' host: 'bookstack.infra3_bookstack_network' (This connection closed normally without authentication)
 2024-06-06 20:59:58 7 [Warning] Aborted connection 7 to db: 'unconnected' user: 'unauthenticated' host: 'bookstack.infra3_bookstack_network' (This connection closed normally without authentication)
+2024-06-06 22:26:26 0 [Note] /usr/bin/mariadbd (initiated by: unknown): Normal shutdown
+2024-06-06 22:26:26 0 [Note] InnoDB: FTS optimize thread exiting.
+2024-06-06 22:26:26 0 [Note] InnoDB: Starting shutdown...
+2024-06-06 22:26:26 0 [Note] InnoDB: Dumping buffer pool(s) to /config/databases/ib_buffer_pool
+2024-06-06 22:26:26 0 [Note] InnoDB: Buffer pool(s) dump completed at 240606 22:26:26
+2024-06-06 22:26:26 0 [Note] InnoDB: Removed temporary tablespace data file: "./ibtmp1"
+2024-06-06 22:26:26 0 [Note] InnoDB: Shutdown completed; log sequence number 1689490; transaction id 2505
+2024-06-06 22:26:26 0 [Note] /usr/bin/mariadbd: Shutdown complete
+
+240606 22:26:26 mysqld_safe mysqld from pid file /var/run/mysqld/mysqld.pid ended
