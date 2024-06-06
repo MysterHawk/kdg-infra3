@@ -67,16 +67,17 @@ enter_container() {
 show_help() {
     echo "Usage: $0 {start|stop|logs|logs_caddy|logs_bookstack|logs_bookstack_db|update|restart|status|enter}"
     echo "Description:"
-    echo "  start            - Start the Docker Compose service"
-    echo "  stop             - Stop the Docker Compose service"
-    echo "  logs             - Show logs of all containers"
-    echo "  logs_caddy       - Show logs of the Caddy container"
-    echo "  logs_bookstack   - Show logs of the Bookstack container"
-    echo "  logs_bookstack_db- Show logs of the Bookstack DB container"
-    echo "  update           - Update all containers and restart"
-    echo "  restart          - Restart the Docker Compose service"
-    echo "  status           - Show status of the Docker Compose service"
-    echo "  enter <container_name> - Enter inside the specified container"
+    echo "  start                  - Start the Docker Compose service"
+    echo "  stop                   - Stop the Docker Compose service"
+    echo "  logs                   - Show logs of all containers"
+    echo "  logs_caddy             - Show logs of the Caddy container"
+    echo "  logs_bookstack         - Show logs of the Bookstack container"
+    echo "  logs_bookstack_db      - Show logs of the Bookstack DB container"
+    echo "  update                 - Update all containers and restart"
+    echo "  restart                - Restart the Docker Compose service"
+    echo "  status                 - Show status of the Docker Compose service"
+    echo "  enter <container_name> - Enter inside a container [caddy|bookstack|bookstack_db]"
+    echo "  help                   - Show this help message"
 }
 
 # Main script
