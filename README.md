@@ -2,6 +2,8 @@
 
 ## Introduction
 
+![Bookstack logo](screenshots/6.png)
+
 BookStack is an open-source platform designed for creating, organizing, and managing documentation and knowledge bases. 
 
 It offers a user-friendly interface for writing and organizing content into books, chapters, and pages, making it ideal for team collaboration and personal documentation needs. 
