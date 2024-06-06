@@ -1,0 +1,58 @@
+services:
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/data:/data
+      - ./caddy/config:/config
+    networks:
+      - bookstack_network
+  bookstack:
+    image: lscr.io/linuxserver/bookstack
+    container_name: bookstack
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+      - APP_URL=https://localhost
+      - DB_HOST=bookstack_db
+      - DB_PORT=3306
+      - DB_USER=bookstack
+      - DB_PASS=definitelyARealPassword!123
+      - DB_DATABASE=bookstackapp
+    volumes:
+      - ./bookstack/config:/config
+    restart: unless-stopped
+    depends_on:
+      - bookstack_db
+    networks:
+      - bookstack_network
+
+  bookstack_db:
+    image: lscr.io/linuxserver/mariadb
+    container_name: bookstack_db
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+      - MYSQL_ROOT_PASSWORD=ReallySecureRootPassword!123
+      - MYSQL_DATABASE=bookstackapp
+      - MYSQL_USER=bookstack
+      - MYSQL_PASSWORD=definitelyARealPassword!123
+    volumes:
+      - ./mariadb/config:/config
+    restart: unless-stopped
+    networks:
+      - bookstack_network
+
+networks:
+  bookstack_network:
+    driver: bridge
