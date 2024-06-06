@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Print cool logo for the script
 echo "📚 Bookstack Docker automation tool 1.0v 📚"
