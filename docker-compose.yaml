@@ -15,6 +15,7 @@ services:
       - ./caddy/config:/config
     networks:
       - bookstack_network
+
   bookstack:
     image: lscr.io/linuxserver/bookstack
     container_name: bookstack
