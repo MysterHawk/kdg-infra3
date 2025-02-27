@@ -1,8 +1,0 @@
-{
-	debug
-}
-
-localhost:443 {
-        reverse_proxy bookstack:80
-        tls internal
-}
